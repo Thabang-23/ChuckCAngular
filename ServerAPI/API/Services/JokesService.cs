@@ -21,9 +21,6 @@ namespace API.Services
             var BaseUrl = _config["ChuckNorris"];
             var httpResponseMessage = await _client.GetStringAsync($"{BaseUrl}/categories");
 
-            // var result = JsonSerializer.Deserialize<string>(httpResponseMessage);
-            //var jsonString = JsonSerializer.Deserialize<string[]>(httpResponseMessage);
-
             return httpResponseMessage;
         }
 
